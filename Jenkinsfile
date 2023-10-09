@@ -43,7 +43,7 @@ pipeline {
         stage('Docker Push and Deploy'){
             steps {
                 sh 'sudo docker push farooq786/springboot:${currentDate}_${BUILD_NUMBER}'
-                sh 'sudo docker run -itd -p 9001:9000 --name springboot farooq786/springboot:${currentDate}_${BUILD_NUMBER}'
+                sh 'sudo docker run -itd -p 8081:8080 --name springboot farooq786/springboot:${currentDate}_${BUILD_NUMBER}'
             }
         }
 
