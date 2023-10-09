@@ -5,11 +5,6 @@ pipeline {
         DOCKER_HUB_CREDENTIALS = credentials('Docker-hub') // Define your Docker Hub credentials in Jenkins
         def currentDate = new Date().format("yyyy-MM-dd-HH-mm-ss")
     }
-
-    tools {
-        maven "3.8.5"
-    
-    }
     stages {
         stage('Compile and Clean') { 
             steps {
